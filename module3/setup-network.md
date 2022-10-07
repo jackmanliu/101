@@ -81,3 +81,11 @@ ip netns exec $pid ip route add default via $GATEWAY
 ```sh
 curl 172.17.0.10
 ```
+
+
+### Check container network
+
+```sh
+nsenter -t $pid -n ip a
+nsenter -t $pid -n ip r
+```
